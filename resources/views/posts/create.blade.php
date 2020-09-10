@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class = 'jumbotron container col-6'>
+<div class = 'jumbotron container post-cont col-6'>
     <form method= "POST" action = "{{route('posts.store')}}">
          @csrf
         <div class="form-group">
@@ -18,7 +18,7 @@
             <textarea name = 'content' class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
     
-        <button class = 'btn btn-primary' type = 'submit'>Post</button>
+        <button class = 'btn btn-warning my-2 my-sm-0' type = 'submit'>Post</button>
     </form>
 </div>
 

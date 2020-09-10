@@ -138,10 +138,6 @@ BODY {
   }
 }
 
-
-
-.post-container{
-  display: inline-block;
-  margin-top: 200px;
-  color: blue;
+.icons{
+  float: right;
 }

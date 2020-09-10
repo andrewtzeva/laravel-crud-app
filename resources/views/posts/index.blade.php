@@ -6,7 +6,7 @@
 
 <div class="card container">
     <div class="card-header">
-      {{$post->title}}
+      {{$post->title}} <span class = 'icons'><i class="fa fa-trash fa-2x" style = "float: right"></i></span>
     </div>
     <div class="card-body">
       <blockquote class="blockquote mb-0">
