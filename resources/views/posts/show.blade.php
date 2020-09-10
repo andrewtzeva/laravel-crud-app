@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="card">
+<div class="card post-container">
     <div class="card-header">
       {{$post->title}}
     </div>

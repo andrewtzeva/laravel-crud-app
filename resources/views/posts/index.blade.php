@@ -4,7 +4,7 @@
 
 @forelse ($posts as $post)
 
-<div class="card">
+<div class="card container">
     <div class="card-header">
       {{$post->title}}
     </div>

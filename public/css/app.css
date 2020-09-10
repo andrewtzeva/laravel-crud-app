@@ -137,3 +137,11 @@ BODY {
         no-repeat 90%;
   }
 }
+
+
+
+.post-container{
+  display: inline-block;
+  margin-top: 200px;
+  color: blue;
+}
