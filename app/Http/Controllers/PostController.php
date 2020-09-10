@@ -36,6 +36,12 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+        $validateData = $request->validate([
+            'name' => 'required|max:100',
+            'title' => 'required|max:100',
+            'content' => 'required|max:1000'
+        ]);
+        
         $post = new Post();
         $post->name = $request->input('name');
         $post->title = $request->input('title');
@@ -65,7 +71,8 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        return view('posts.edit', ['post' => $post]);
     }
 
     /**
@@ -77,7 +84,21 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $post = Post::findOrFail($id);
+
+        $validateData = $request->validate([
+            'name' => 'required|max:100',
+            'title' => 'required|max:100',
+            'content' => 'required|max:1000'
+        ]);
+
+        $post->name = $request->input('name');
+        $post->title = $request->input('title');
+        $post->content = $request->input('content');
+        
+        $post->save();
+
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -88,6 +109,10 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = Post::findOrFail($id);
+        $post->delete();
+        
+        return redirect()->route('posts.index');
+        
     }
 }

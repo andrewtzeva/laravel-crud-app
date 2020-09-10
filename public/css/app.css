@@ -141,3 +141,11 @@ BODY {
 .icons{
   float: right;
 }
+
+.post-cont{
+  margin-top: 100px;
+}
+
+.page-footer{
+  margin-top: 50px;
+}
